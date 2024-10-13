@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package Servlet;
+
 import common.database;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,7 +42,7 @@ public class EditServlet extends HttpServlet {
             ResultSet rs = null;
             String kq = "";
             try {
-                conn=database.getConnection();
+                conn = database.getConnection();
                 ps = conn.prepareStatement("select * from users where id=" + id);
                 rs = ps.executeQuery();
                 if (rs.next()) {
